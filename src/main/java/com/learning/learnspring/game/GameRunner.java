@@ -1,13 +1,14 @@
 package com.learning.learnspring.game;
 
 public class GameRunner {
-    private Mario mario;
-    public GameRunner(Mario mario) {
-        this.mario = mario;
+    private final GamingConsole game;
+    public GameRunner(GamingConsole game) {
+        this.game = game;
     }
 
 
     public void run() {
-        System.out.println("Running Mario");
+       game.up();
+       game.down();
     }
 }
