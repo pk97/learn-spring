@@ -14,8 +14,6 @@ public class AppGamingBasicJava {
 
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppGamingBasicJava.class);
 
-        applicationContext.getBean(GamingConsole.class).up();
         applicationContext.getBean(GameRunner.class).run();
-        //g.run();
     }
 }
