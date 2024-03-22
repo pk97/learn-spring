@@ -1,5 +1,8 @@
 package com.learning.learnspring.game;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 public class PacManGame implements GamingConsole {
 
     PacManGame() {

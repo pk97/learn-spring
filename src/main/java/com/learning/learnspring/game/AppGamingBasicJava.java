@@ -1,10 +1,15 @@
 package com.learning.learnspring.game;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class AppGamingBasicJava {
     public static void main(String[] args) {
         //var game = new MarioGame();
-        var game = new PacManGame();
-        var gameRunner = new GameRunner(game);
-        gameRunner.run();
+
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Configuration.class);
+
+        applicationContext.getBean(GamingConsole.class).up();
+        applicationContext.getBean(GameRunner.class).run();
+        //g.run();
     }
 }
