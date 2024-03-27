@@ -13,3 +13,6 @@
 6. All beans get initialized in starting of SPring application and then autowiring takes place.
    But we can use @LAZY annotation to delay the intialisation but it is generally not recemonded as
    as it delays startup issue to production issue.
+7. Scope types
+   - Scope annotation is used to create a Singleton (one bean per Spring IOC continer) or Prototype.
+     For protoype, everytime a new bean is created whenever the bean is accessed by context.
