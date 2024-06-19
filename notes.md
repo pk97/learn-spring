@@ -35,4 +35,36 @@
     such as application-dev.properties, application-prod.properties. In the default file, which is application.properties,
     set profile as spring.profile.env and spring will merge application.properties and the respective env property file.
 5. Spring Actuator is a starter which gives important metrics like requests per second, thread pool size, all beans etc.
+
+## Spring Boot and DB ##
+
+1. SPring JDBC was earlier used to connect to db. JDBCTemplate was used to hardcode queries in code and update/search in db.
+2. JPA -> Java Persistance API. Just make the class as Entity and use Entity Manager in repository to access data. No need
+    to manually write queires.
+3. Spring JPA -> No need of entitiy Manager. just extend JAPRepository and the quries are formed 
+on the fly by the library.
+
+## Web Services in SPring ##
+ <p> Initially there was not a concept of a separate UI/frontend as most sites were static. Hence
+    provided JSP(Java Server Pages). It provides a view which is basically whole HTML page to browser
+    whenever a request is made. Some important annotations
+    - Controller
+    - @RequestMapping("path")
+    - @RequestParam - QueryParam
+    - @ResponseBody - when you don't want to return a view, return Body as is. 
+</p>
+
+<p> Logging is important aspect. You can set log level for a specific package too. Usually SFL4J 
+is used for logging i.e LoggingFactory with is a transient dependency of spring-web</p>
+
+## DispatcherServlet
+
+- MVC model stnnds for Model, View, Controller. First Request comes to a front controller called
+  dispatcher servlet. From there it is routed to COntroller, then a model is assigned to it and in
+the end a View is assigned (JSP).
+
+## Headers
+- Accept-header is used to tell what format client expects the data. If server can serve it then well and good.
+- Accept-language
+
     
